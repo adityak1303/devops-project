@@ -2,3 +2,4 @@
 .idea
 .virtualenv
 **/__pycache__
+**/.pytest_cache
