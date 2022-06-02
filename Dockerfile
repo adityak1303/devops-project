@@ -1,5 +1,5 @@
-FROM python:3.10
-ADD . /python-flask
-WORKDIR /python-flask
-RUN pip install -r requirements.txt
-CMD ["flask", "run"]
+FROM python:3.8-slim-buster
+WORKDIR /python-docker
+COPY . .
+RUN pip3 install -r requirements.txt
+CMD [ "python", "-m" , "flask", "run", "--host=0.0.0.0"]
