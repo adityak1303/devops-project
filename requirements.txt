@@ -17,3 +17,4 @@ SQLAlchemy==1.4.27
 urllib3==1.26.7
 Werkzeug==2.0.2
 selenium==4.2.0
+pytest==7.1.2
