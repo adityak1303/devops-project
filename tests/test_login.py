@@ -14,14 +14,13 @@ def test_login():
     title = driver.title
     assert title != ""
     WebDriverWait(driver, timeout=10).until(find_element_by_xpath(xpath="/html/body/nav/ul/li[1]/a"))
-    driver.find_element(by=By.XPATH, value="/html/body/div[2]/div/div[2]/div/div/form/input[1]").send_keys(
-        "abcdef@gmail.com")
-    driver.find_element(by=By.XPATH, value="/html/body/div[2]/div/div[2]/div/div/form/input[2]").send_keys("kiran")
+    driver.find_element(by=By.XPATH, value="/html/body/div[2]/div/div[2]/div/div/form/input[1]").send_keys("adityaDemo@gmail.com")
+    driver.find_element(by=By.XPATH, value="/html/body/div[2]/div/div[2]/div/div/form/input[2]").send_keys("demo1234")
     driver.find_element(by=By.XPATH, value="/html/body/div[2]/div/div[2]/div/div/form/input[4]").click()
     WebDriverWait(driver, timeout=10).until(find_element_by_xpath(xpath="/html/body/nav/ul/li[1]/a"))
     login_string = driver.find_element(by=By.XPATH, value="/html/body/nav/ul/li[1]/a").text
     print(login_string)
-    assert login_string.endswith("Kiran") == True
+    assert login_string.endswith("Aditya") == True
 
     # driver.quit()
 
